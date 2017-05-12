@@ -2,7 +2,7 @@
 
 AdoptAKitten is a school project about making a REST API to adopt poor little kittens !
 
-Contributors : Poch & Maxime
+Contributors : Poch & Maxime !!
 
 ## Requirements
 - MongoDB
