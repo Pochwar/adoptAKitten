@@ -1,0 +1,128 @@
+#kittens .row .col a{
+    cursor: pointer;
+    color: #fff;
+}
+
+#kittens .row .col a:hover{
+    text-decoration: none;
+}
+
+#kittens .row .col .inner-col{
+    background: #353F85;
+    border-radius: 5px;
+    border-color: black;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+#kittens .row .col .inner-col:hover{
+    background: #4651A0;
+}
+
+#kittens .row .col .inner-col h3{
+    margin-top: 0px;
+}
+
+#form {
+    background: #F0F8FF;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+}
+
+.container {
+    background: #566EB2;
+    border-radius: 5px;
+    color: #F0F8FF;
+}
+
+#form label {
+    width: 150px;
+    margin: 5px;
+}
+
+.justify-content-md-center {
+    background: #566EB2;
+    color: #5C76BF;
+    border-radius: 5px;
+}
+
+.justify-content-md-center h1, h2 {
+    color: #F0F8FF;
+}
+
+#content #kittendetail{
+    margin-bottom: 15px;
+    background: rgba(0,0,0,0.7);
+}
+
+#info{
+    display: none;
+    margin: 1px;
+    position: relative;
+}
+
+#info ul {
+    background-color: #F0F8FF;
+    color: #5C76BF;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#modif{
+    display: none;
+    position: relative;
+    margin: 1px;
+}
+
+#modif form {
+    background-color: #F0F8FF;
+    color: #5C76BF;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#btnCancel {
+    position: absolute;
+    left: 81px;
+    top: 303px;
+}
+
+button {
+    color: #353F85;
+    background-color: #F0F8FF;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input {
+    color: #353F85;
+    background-color: #F0F8FF;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+body {
+    background-image:url(/../img/chaton2.jpg);
+    background-size: cover;
+}
+
+hr {
+    color: #566EB2;
+}
+
+.champsObligatoires {
+    font-weight: bold;
+    float: right;
+}
+
+.closeDetail {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: -18px;
+    left: -38px;
+}

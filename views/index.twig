@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Kittens</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/styles.css" >
+</head>
+
+<body>
+<header class="container">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-4">
+            <h1>Kittens App</h1>
+            <img src="img/chaton.jpg">
+        </div>
+        <div class="col col-lg-8">
+            <h1>Add a kitten</h1>
+            <form id="form">
+                <label for="name">*Name : </label><input type="text" name="name" id="name" required><br>
+                <label for="color">*Color : </label><input type="text" name="color" id="color" required><br>
+                <label for="quality1">*Quality 1 : </label><input type="text" name="quality1" id="quality1" required><br>
+                <label for="quality2">quality 2 : </label><input type="text" name="quality2" id="quality2"><br>
+                <label for="defaults">Defaults : </label><input type="text" name="defaults" id="defaults"><br>
+                <label for="bestFood">Best Food : </label><input type="text" name="bestFood" id="bestFood"><br>
+                <input type="submit" value="Add">
+                <p class="champsObligatoires"> * Champs obligatoires</p>
+            </form>
+        </div>
+    </div>
+
+</header>
+
+<div id="content">
+    <hr>
+    <div id="kittendetail" class="container">
+        <div id="info">
+            <button class="closeDetail" onclick="closeDetail()">X</button>
+            <h2>Kitten Detail</h2>
+            <h3></h3>
+            <ul>
+                <li id="color"></li>
+                <li id="quality1"></li>
+                <li id="quality2"></li>
+                <li id="default"></li>
+                <li id="bestFood"></li>
+                <li id="available"></li>
+            </ul>
+            <button id="btnModif">Modify</button>
+            <button id="btnDelete">Delete</button>
+        </div>
+        <div id="modif">
+            <button class="closeDetail" onclick="closeDetail()">X</button>
+            <h2>Kitten Detail</h2>
+            <form id="formModif">
+                <input type="hidden" name="id" id="id"><br>
+                <label for="name">Name : </label><input type="text" name="name" id="name" required><br>
+                <label for="color">Color : </label><input type="text" name="color" id="color" required><br>
+                <label for="quality1">Quality 1 : </label><input type="text" name="quality1" id="quality1" required><br>
+                <label for="quality2">quality 2 : </label><input type="text" name="quality2" id="quality2"><br>
+                <label for="defaults">Defaults : </label><input type="text" name="defaults" id="defaults"><br>
+                <label for="bestFood">Best Food : </label><input type="text" name="bestFood" id="bestFood"><br>
+                Available :
+                <label for="available-yes">Yes : </label><input type="radio" value="true" name="available" id="available-yes">
+                <label for="available-no">No : </label><input type="radio" value="false" name="available" id="available-no">
+                <br/>
+                <input type="submit" value="Modify">
+            </form>
+            <button id="btnCancel">Cancel</button>
+        </div>
+    </div>
+    <div id="kittens" class="container">
+        <h2>Kitten List</h2>
+        <div class="row">
+        {% for kitten in kittens %}
+            <div class="col col-md-2" id="{{ kitten._id }}">
+                <a onclick="more('{{ kitten._id }}')">
+                    <div class="inner-col">
+                        <h3>{{ kitten.name }}</h3>
+                        <p>Available : {{ kitten.available }}</p>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+<p class="text-center text-muted">Copyright 2017 Kittens</p>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+</body>
+</html>
